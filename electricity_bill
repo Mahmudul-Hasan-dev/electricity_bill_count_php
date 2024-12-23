@@ -1,0 +1,22 @@
+<?php
+// Step 1: Input the number of units used
+$unitsConsumed = 150; //value declaring
+
+// Step 2: take bill and count
+$bill = 0;
+
+// Step 3: Calculate the bill based on using
+if ($unitsConsumed >= 1 && $unitsConsumed <= 100) {
+    $bill = $unitsConsumed * 5; // $5 per unit for 1-100 units
+} elseif ($unitsConsumed >= 101 && $unitsConsumed <= 200) {
+    $bill = $unitsConsumed * 10; // $10 per unit for 101-200 units
+} elseif ($unitsConsumed > 200) {
+    $bill = $unitsConsumed * 15; // $15 per unit for above 200 units
+} else {
+    echo "Invalid number of units.\n";
+    exit; 
+}
+
+// Step 4: Display total bill
+echo "Total electricity bill for $unitsConsumed units is: $$bill\n";
+?>
